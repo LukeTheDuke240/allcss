@@ -1,0 +1,637 @@
+:root {
+	--accent-color: #FF3030;
+	--text-color: white;
+	--button-color: black;
+	--background-color: black;
+	
+	--menu-bg-color: rgba(0,0,0,0);
+	--hide-extraneous-shit: none;
+	--hide-ad-container: none;
+
+	--yellow: var(--accent-color);
+    	--blue: var(--accent-color);
+    	--green: var(--accent-color);
+    	--red: var(--accent-color);
+}
+
+*, .settName, .settNameSmall, .settingsBtn, .menuTabNew, .grey, #mailList, .changeText, .accountButton, .accountInput, .partnerItem, #premTime, .loadoutBtn, .vis-item, .mailObj, .mailText, #requiresRestart, #rawMapData, .smlInput, #itemSearch {
+    color: var(--text-color);
+}
+
+.imageButton, .headerBarRight .verticalSeparator, #faceItIconM, #claimHolder, #merchHolder, #seasonLabel, #newsHolder, #onetrust-consent-sdk, #gameNameHolder, #voiceDisplay, #settingsPreset, #hudClassIcon, #timerIcon, #curGameInfo, #maxHP, #challIcon, #ammoMax, #ammoIcon, #editorBtnM, .weapKey,  #speedRunTimer, #clientExit, #youNewDiv, .krSocial, #menuServerInfoContainer, #mLevelCont, #menuMiniProfilePic, #policeButton, .verticalSeparatorInline, #healthBar, #streamContainer, #tlInfHold, .setSugBox {
+	display: var(--hide-extraneous-shit) !important;
+}
+
+#subLogoButtons > .button {
+	border: unset !important;
+	text-shadow: -1px -1px 0 #202020,1px -1px 0 #202020,-1px 1px 0 #202020,1px 1px 0 #202020,-2px -2px 0 #202020,2px -2px 0 #202020,-2px 2px 0 #202020,2px 2px 0 #202020,-3px -3px 0 #202020,3px -3px 0 #202020,-3px 3px 0 #202020,3px 3px 0 #202020!important;
+}
+
+#aHolder, .endAHolder {
+	display: var(--hide-ad-container) !important;
+}
+
+#popupBack{
+	background: rgba(0,0,0,.5);
+}
+
+#streamContainer{
+	top: 0px;
+}
+
+.vis-item{
+	border-color: var(--accent-color) !important;
+	border-width: 2px !important;
+}
+
+.headerBar, .menuItem, #termsInfo, #mLevelCont, #settSearch, #timerDisplay, #matchVoteHolder, #scoreZoneCount, #livesCount, #killCount, #deathCount, #streakCount, #scoreCount, #healthValueHolder, .UIB, .kfItem, .teamTotals, .chatItem, #teamScores, #killCard, #streamContainer, .vis-item, #chatInput, .sliderSml, .slider2, .slider, #spinKR, #spinInfo, #specContr, #specNames, #specStats, #speedRunBox, #selectorContainer, .selectorItem, .classCard,  .cwSumStat, #leaderDisplay  {
+	background-color: var(--menu-bg-color) !important;
+}
+
+#policePopC, .speechBox, #menuWindow, .settingsHeader, .serverHeader, .inputGrey, .inputGrey2, #loadoutName, #loadoutSelect, .progressBar, .endCard, #rawMapData, .hostOpt, #mpCat, #itemSearch {
+	background: var(--background-color) !important;
+}
+
+#trustPrgHD, input:checked+.sliderSml, input:checked+.slider, input:checked+.optCheck, input:checked+.slider2, .settingsBtn, .sliderVal, .accountButton, .krSocial, .progressBarInner, .searchBtn, .xpBarB, .loadoutBtn, .hostToggle, .hostPresetBtn, .quickJoin, .clsXPBarC, .subPassChg, .lnkTw, .redVouchBtn, .creatorCodeBtn, .chalXPBarC {
+	background: var(--accent-color) !important;
+}
+
+#menuWindow, .endCard {
+	box-shadow: 0px 7px 0 0 var(--accent-color) !important;
+}
+
+.tabANew {
+	border-bottom: 5px solid var(--accent-color) !important;
+}
+
+#settingsTabLayout {
+	grid-template-columns: auto auto auto auto auto auto auto;
+}
+
+.settingsHeader {
+	top: -1px;
+}
+
+#tabHolder {
+	margin-bottom: 0;
+}
+
+#subLogoButtons {
+	bottom: 65px;
+	transform: translate(-50%,0);
+}
+
+#chatHolder {
+	bottom: 20px !important;
+}
+
+.button {
+	border: none!important;
+	text-shadow: -1px -1px 0 #202020,1px -1px 0 #202020,-1px 1px 0 #202020,1px 1px 0 #202020,-2px -2px 0 #202020,2px -2px 0 #202020,-2px 2px 0 #202020,2px 2px 0 #202020,-3px -3px 0 #202020,3px -3px 0 #202020,-3px 3px 0 #202020,3px 3px 0 #202020!important;
+}
+
+.button:hover {
+	border: none!important;
+	background-color: #fff!important;
+	box-shadow: inset 0 -7px 0 0 #b3b3b3!important;
+}
+
+.button:active {
+	border: none!important;
+	background-color: #fff!important;
+	box-shadow: inset 0 -7px 0 0 #b3b3b3!important;
+}
+#menuHolder::before {
+    	content: 'css by LukeTheDuke420';
+    	font-size: 18px;
+    	margin-right: 22px;
+    	color: rgba(255, 255, 255, .5);
+	position: fixed;
+	top:10px;
+	left: 10px;
+}
+
+.verticalSeparatorInline, .verticalSeparator {
+	opacity: 0;
+}
+
+
+
+.progressBar, .progressBarInner{
+	border-radius: 10px;
+}
+
+.slider, .slider2{
+	border: 4px solid var(--accent-color);
+	height: 10px;
+	margin: auto;
+	border-radius: 8px;
+}
+
+.sliderSml {
+	border: 4px solid var(--accent-color);
+}
+
+.switchsml {
+	width: 50px;
+}
+
+#chatInput {
+	height: 50px;
+	border: none;
+	
+}
+
+.slider:before, .slider2:before, .sliderSml:before {
+	display: none;
+}
+
+.switch {
+	height: 40px;
+	margin-bottom: 0;
+	width: 86px;
+}
+
+.sliderM {
+	transform: translateY(-110%);
+	background-color: var(--accent-color);
+	border: 2px solid var(--accent-color);
+	height: 4px;
+}
+
+.sliderVal {
+	height: 100%;
+	width: 66px;
+}
+
+.sliderM::-webkit-slider-thumb {
+	border-radius: 40px;
+    width: 35px;
+    height: 35px;
+    border: 4px solid var(--accent-color);
+	background: var(--background-color);
+}
+
+#timerDisplay {
+	position: fixed;
+	left: 50%;
+	transform: translateX(-50%);
+	padding: 0;
+	margin: 0;
+}
+
+#spectButton {
+	top: calc(100% - 170px) !important;
+}
+
+#weapDisplay {
+	bottom: 0px !important;
+}
+
+
+.button, .joinQueue, #bidPrevBtn, .bidPlace {
+	background: var(--background-color) !important;
+	box-shadow: inset 0 -7px 0 0 var(--accent-color) !important;
+}
+
+.changeText, #accResp, .reqWLvl, .reqWTxt, .speechBox, #clanErr, .estOfferVal {
+	color: var(--text-color) !important;
+}
+
+a, a:hover, a:active, .mailFrom{
+	color: var(--accent-color);
+}
+
+#signedInHeaderBar {
+	padding: 0 0 0 0;
+	left: 50% !important;
+	transform: translateX(-50%);
+	position: fixed;
+}
+
+#signedOutHeaderBar {
+	width: 100%;
+	padding: 0 0 0 0;
+}
+
+#menuHider {
+	width: 100%
+}
+
+.button.lgn {
+	margin: auto !important;
+	padding-top: 5px!important;
+    padding-bottom: 22px!important;
+    padding-left: 22px!important;
+    padding-right: 22px!important;
+}
+
+#chatHolder{
+	width: 500px;
+}
+
+#uiBase.onMenu #chatHolder {
+	left: 20px;
+}
+
+.chatItem {
+	margin: 5px 10px;
+	max-width: 500px;
+}
+
+.classCard{
+	width: 96%;
+	height: 100px;
+	text-align: left;
+}
+
+.classWeap {
+	text-align: left;
+}
+
+.classImgC {
+	position: absolute;
+	right: 0;
+	top: 10px;
+	width: 100px;
+}
+
+.classXPBar {
+	top: 97px;
+	width: 82%;
+	height: 20px;
+	border-radius: 40px;
+}
+
+.clsXPBarC {
+	margin: 0;
+	border-radius: 40px;
+}
+
+.classLvl {
+	top: 10px;
+	right: 110px;
+	text-align: right;
+}
+
+.classHP {
+	top: 45px;
+	right: 110px;
+	text-align: right;
+}
+
+
+#mLevelCont{
+	left: 100% !important;
+}
+
+span[style="color:rgba(0,0,0,0.8)"], .settText, .settLabel {
+	color: var(--accent-color) !important;
+}
+
+::-webkit-scrollbar-track {
+	-webkit-box-shadow: none;
+	box-shadow: none;
+	background-color: var(--background-color) !important;
+}
+
+::-webkit-scrollbar-thumb {
+	background: var(--accent-color) !important;
+}
+
+#bottomLeftHolder, #bottomRight {
+	width: 100%;
+	height: 100%;
+	top: 0 !important;
+	left: 0 !important;
+}
+
+#healthValue {
+	right: 60%;
+	top: 55%;
+	position: absolute;
+	text-align: right;
+	font-size: 30px;
+}
+
+#ammoDisplay {
+	left: 60%;
+	top: 55%;
+	position: absolute;
+	font-size: 30px;
+	height: 5px;	
+}
+
+#gameUI, .teamTotals, .chatItem, #teamScores, #killCard, #chatInput { 
+	text-shadow: -1px -1px 0 #000,1px -1px 0 #000,-1px 1px 0 #000,1px 1px 0 #000,-2px -2px 0 #000,2px -2px 0 #000,-2px 2px 0 #000,2px 2px 0 #000,-3px -3px 0 #000,3px -3px 0 #000,-3px 3px 0 #000,3px 3px 0 #000 !important
+}
+
+.sb1:before {
+	border-left: 10px solid #000;
+    border-top: 10px solid #000;
+}
+
+/*choose a display name and more on profile and shop respectively*/
+[style="color:rgba(0,0,0,0.3);margin-top:-5px;margin-bottom:10px"], div[style="color:rgba(0,0,0,0.3);margin-bottom:10px"], .b, span[style="float:right;margin-right:10px;color:rgba(0,0,0,0.5)"], [style="color:rgba(0,0,0,0.3);float:right"], [style="float:right;color:rgba(0,0,0,0.4)"] {
+	color: var(--text-color) !important;
+}
+
+/*last one is redeem kr*/
+[style="color:rgba(0,0,0,0.6)"], [style="float:right;color:rgba(0,0,0,0.6)"], [style="color:rgba(0,0,0,0.3);font-size:19px;margin-bottom:5px;margin-top: 15px;"], [style="color:rgba(0,0,0,0.5)"], [style="float:right;color:rgba(0,0,0,0.3)"] {
+	color: var(--text-color) !important;
+}
+
+/*krunker partner menu override 1, 2, twitch drop, purchase kr, redeem, kpd, contact 1 and 2 and 3, advertise 1, kr*/
+div[style="color:rgba(0,0,0,0.6);margin-bottom:20px"], div[style="font-size:17px;color:rgba(0,0,0,0.4);margin-top:5px"], div[style="margin-bottom:10px;color:rgba(0,0,0,0.5);"], div[style="color:rgba(0,0,0,0.3);font-size:19px;margin-bottom:-3px"], div[style="color:rgba(0,0,0,0.3);font-size:19px;margin-bottom:5px"], div[style="color:rgba(0,0,0,0.6);font-size:19px"], div[style="color:rgba(0,0,0,0.4);margin-top:0px"], div[style="color:rgba(0,0,0,0.4);margin-top:10px"], div[style="color:rgba(0,0,0,0.5)"], div[style="color:rgba(0,0,0,0.4)"] {
+	color: var(--text-color) !important;
+}
+
+div[style="background-color:gainsboro;border-radius:6px;padding:5px"], [style="border-radius:6px;border:none;background:#eee;padding:6px;padding-bottom:6px;float:right;margin-top:5px;margin-bottom:5px;"], [style="border-radius:6px;border:none;background:#eee;padding:6px;padding-bottom:6px;float:right;margin-top:5px;margin-bottom:5px;"] {
+	background-color: var(--background-color) !important;
+}
+
+#searchResultsMA, [style="color: rgba(0,0,0,0.7);"] {
+	color: var(--text-color) !important;
+}
+
+.weapIcon {
+	margin-right: 0 !important;
+}
+
+#speedRunBox {
+	width: 240px;
+}
+
+
+/*manual menu override for putting it at the bottom*/
+#menuItemContainer {
+	position: absolute;
+    bottom: 0px;
+    left: 50%;
+    transform: translate(-50%,0);
+	top: initial;
+	width: auto;
+	display: flex;
+    flex-direction: row;
+}
+
+.menuItem {
+	padding-top: 5px!important;
+    padding-bottom: 13px!important;
+    padding-left: 22px!important;
+    padding-right: 22px!important;
+    font-size: 22px!important;
+    margin-left: 3px;
+    margin-right: 3px;
+    text-shadow: -1px -1px 0 #202020,1px -1px 0 #202020,-1px 1px 0 #202020,1px 1px 0 #202020,-2px -2px 0 #202020,2px -2px 0 #202020,-2px 2px 0 #202020,2px 2px 0 #202020,-3px -3px 0 #202020,3px -3px 0 #202020,-3px 3px 0 #202020,3px 3px 0 #202020!important;
+	background: var(--background-color) !important;
+    box-shadow: inset 0 -7px 0 0 var(--accent-color) !important;
+	position: relative;
+    display: inline-block;
+    box-sizing: border-box;
+    border-radius: 4px;
+    padding: 12px 18px;
+    padding-top: 14px;
+    margin-bottom: 6px;
+    background-color: #ffc147;
+    box-shadow: inset 0 -7px 0 0 #b08531;
+    text-align: center;
+    color: #fff;
+    text-shadow: -1px -1px 0 #202020, 1px -1px 0 #202020, -1px 1px 0 #202020, 1px 1px 0 #202020, -2px -2px 0 #202020, 2px -2px 0 #202020, -2px 2px 0 #202020, 2px 2px 0 #202020;
+    pointer-events: all;
+    cursor: pointer;
+    -webkit-transition: all .1s;
+    transition: all .1s;
+	flex-grow: unset;
+}
+
+.menuItemIcon {
+	displaY: none;
+}
+
+.menuItemTitle{
+	font-size: inherit !important;
+	margin-top: 0 !important;
+}
+
+.menuItem:hover, #subLogoButtons > .button:hover {
+	background-color: #fff!important;
+	box-shadow: inset 0 -7px 0 0 #b3b3b3!important;
+	border-left: 0;
+	-webkit-transform: scale(.95);
+	transform: scale(.95)
+	
+}
+
+#accManagerBtn {
+	display: none !important;
+}
+
+#customizeButton {
+	height: 300px;
+	top: -300px;
+	opacity: 0;
+}
+
+#menuClassContainer {
+	top: 340px;
+}
+
+#menuClassNameTag {
+	margin-top: 35px;
+}
+
+#healthBar {
+	height: 20px;
+	position: absolute;
+	top: 65%;
+	left: 50%;
+	transform: translateX(-50%);
+	border-radius: 20px;
+	overflow: hidden;
+}
+
+.healthBarSeg {
+	width: 70px;
+	border-radius: unset;
+}
+
+.hpBSeg {
+	border-radius: 0;
+	box-shadow: none;
+	webkit-box-shadow: none;
+}
+
+/* new shop */
+
+[style="color:rgba(0,0,0,0.3);"], [style="color:rgba(0,0,0,0.3);font-size:19px;margin-top:10px"], [style="float:right;color:rgba(0,0,0,0.3);font-size:22px"] {
+	color: var(--text-color) !important;
+}
+
+.slidecontainer {
+	margin-top: 0px !important;
+}
+
+.advancedToggle {
+	background: var(--accent-color);
+}
+
+#presetName, #presetSelect {
+	background: var(--background-color) !important;
+}
+
+.selectedItem {
+	filter: unset;
+	background: unset;
+	border: unset !important;
+	border-bottom: 4px red solid !important;
+}
+
+.selectorItem {
+	border: unset;
+}
+
+#topMidHold {
+	top: unset;
+	bottom: 15px;
+}
+
+#reloadMsg {
+	bottom: 30%;
+	background: transparent;
+}
+
+/*new ui that makes me wanna die*/
+.custContainer {
+	padding: 8px;
+	border: unset;
+}
+
+.settName, .mailFrom {
+	padding-bottom: 0px;
+	border-bottom: unset;
+}
+
+.changeText {
+	margin: 0;
+	padding: 0;
+	border-bottom: unset;
+	margin-bottom: 4px;
+}
+
+.setHed, .setHedS {
+	border: unset;
+	padding-top: 10px;
+	background: transparent !important;
+	
+}
+
+.setHed, .setBodH {
+	margin: 0;
+}
+
+.sliderVal {
+	border: unset !important;
+}
+
+.dark .tabANew {
+border: unset;
+	border-bottom: 4px solid var(--accent-color) !important;
+}
+
+
+
+[style="height:15px;margin-top:30px;border-top:4px solid rgba(255, 255, 255, 0.8);"] {
+	display: none;
+}
+
+.mailFrom {
+	color: var(--accent-color) !important;
+}
+
+.smlInput {
+	background: transparent !important;
+}
+
+#windowCloser {
+	display: none;
+}
+
+#windowHolder.popupWin {
+	background-color: transparent !important;
+}
+
+.chalCard {
+	border: unset;
+	background: transparent;
+}
+
+#serverHolder>.setHed {
+	padding: 5px !important;
+}
+
+#chatList {
+	background-color: transparent;
+}
+
+.bigMenTabA {
+	border-bottom: 5px solid var(--accent-color);
+}
+
+/*chat*/
+
+#chatInputHolder {
+	background-color: transparent;
+	border: unset;
+	display:flex;
+}
+
+#chatSwitchHolder {
+	margin-top: 8px;
+}
+
+/*mod and game menus*/
+
+#bigMFeatPBtn, #bigMFeatHBtn, #hostActionH, .hostHeader, #interactMsg, #reloadMsg, .quickJoin {
+	border: none;
+}
+
+#interactMsg {
+	background: transparent;
+}
+
+.hostCBtn {
+	border: none;
+	background-color: var(--accent-color);
+}
+
+#krRewardsInfo > * {
+	border: none;
+}
+
+#hostMenuBtn {
+	background-color: var(--accent-color);
+}
+
+.bigMenTabs > .bigMenTab > .material-icons {
+	color: var(--accent-color);
+}
+
+/*update 12/09/2021*/
+
+.menBtnIcn {
+	display: none !important;
+}
+
+#menuBtnProfile {
+	font-size: 0 !important;
+}
+
+#menuBtnProfile::before {
+	content: "Profile";
+	font-size: 22px !important;
+}
+
+#menuItemContainer {
+	background: transparent;
+}

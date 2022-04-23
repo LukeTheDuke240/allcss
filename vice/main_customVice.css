@@ -1,0 +1,448 @@
+/*
+VICE CITY CSS BY LUKETHEDUKE#7313
+vice pink #ff96e1
+vice blue #5bb4e4
+vice green #00C882
+menu green #178443
+*/
+
+@font-face {
+	font-family: gamefont;
+	src: url("https://luketheduke.xyz/assets/p2/sf_arborcrest.ttf");
+}
+
+@font-face {
+	font-family: Pricedown;
+	src: url("https://luketheduke.xyz/assets/p2/pricedown_no_lig.otf");
+}
+
+@keyframes loadbar {
+  0%   {background-size: 0%;}
+  10%  {background-size: 10%;}
+  15%  {background-size: 15%;}
+  30%  {background-size: 30%;}
+  40% {background-size: 40%;}
+  41%   {background-size: 41%;}
+  42%  {background-size: 42%;}
+  45%  {background-size: 45%;}
+  50%  {background-size: 50%;}
+  60% {background-size: 60%;}
+  65%   {background-size: 65%;}
+  70%  {background-size: 70%;}
+  80%  {background-size: 80%;}
+  95%  {background-size: 95%;}
+  100% {background-size: 100%;}
+}
+
+@keyframes fadein {
+	from {opacity: 0;}
+	to {opacity: 1;}
+}
+
+#healthBar, #maxHP, #timerIcon, #curGameInfo, #voiceDisplay, #ammoIcon, #onetrust-consent-sdk, #tlInfHold, #newsHolder, #editorBtnM, .verticalSeparator, .verticalSeparatorInline, #seasonLabel, #speedRunReset, #menuPingDisplay, #menuClassSubtext, #menuClassName, #menuClassNameTag, .krSocial, #mLevelCont, #menuLvlHold, #menuMiniProfilePic, #policeButton, #faceitReturnHolder {
+	display: none;
+}
+
+#accManagerBtn {
+	display: none !important;
+}
+
+#weapDisplay, #teamScores, #aHolder, .endAHolder, .imageButton, #pingIcon {
+	display: none !important;
+}
+
+#hudClassIcon, #healthValueHolder, .leftUIB, .countIcon, #chatInput, .headerBar, #leaderDisplay, #matchVoteHolder, #endTable, #termsInfo, #instructionHolder, #tabHolder {
+	background-color: unset;
+}
+
+#hudClassIcon {
+	width: 150px;
+	height: 150px;
+	border-radius: 40px;
+	top: 90px;
+    right: 90px;
+    position: fixed;
+}
+
+#hudClassImg {
+	border-radius: 40px;
+	border: 10px solid pink;
+}
+
+#healthValue {
+	font-family: pricedown;
+    	font-size: 80px;
+   	position: fixed;
+   	top: 180px;
+   	right: 300px;
+	margin: 0;
+	padding: 0;
+	color: #ff96e1;
+	text-shadow: 4px 4px black;
+}
+
+#healthValue::before {
+	content: "favorite";
+    font-family: "Material Icons";
+    position: absolute;
+    right: calc(100% + 8px);
+    top: 12px;
+    font-size: 70px;
+    filter: drop-shadow(1px 1px 0px black);
+}
+
+#timerVal {
+	position: fixed;
+   	right: 0px;
+    	top: 0px;
+	padding: 0;
+    	font-family: "pricedown";
+   	font-size: 80px;
+	color: #5bb4e4;
+}
+
+#timerDisplay {
+	position: fixed;
+	top: 60px;
+    	right: 300px;
+	margin: 0;
+	padding: 0;
+	text-shadow: 4px 4px black;
+}
+
+#uiBase.onMenu #chatHolder {
+    display: none;
+}
+
+#chatHolder {
+	bottom: 20px !important;
+	left: 20px !important;	
+	width: 550px;
+}
+
+#ammoDisplay {
+	background-color: #00000000;
+	background-image: unset;
+	padding: 0;
+	width: 300px;
+}
+
+#bottomRight {
+	position: absolute;
+    	top: 260px;
+    	right: 30px;
+    	z-index: 3;
+}
+
+#ammoVal, #ammoMax {
+	font-family: "SF Arborcrest Medium";
+	text-shadow: 4px 4px black;
+	color: #ff96e1;
+	font-size: 40px;
+}
+
+[style="color:#ffc147;font-size:35px;"] {
+	display: none !important;
+}
+
+#scoreCount {
+	margin: 0;
+	padding: 0;
+	position: fixed;
+    	top: 120px;
+	right: 300px;
+}
+
+#myScoreVal {
+	font-family: "pricedown";
+	font-size: 80px;
+	color: #00C882;
+	text-shadow: 4px 4px black;
+}
+
+#gameMessage {
+	text-shadow: 3px 3px black;
+}
+
+#myScoreVal::before {
+	content: "$";
+}
+
+.chatItem, .chatMsg {
+	font-size: 28px;
+	text-shadow: 3px 3px black;
+}
+
+#chatInput {
+	font-size: 28px;
+	text-shadow: 3px 3px black;
+}
+
+.kfMsg {
+	font-size: 28px;
+	text-shadow: 3px 3px black;
+}
+
+.chatItem {
+	max-width: 550px;
+	padding-top: 0;
+	margin-bottom: 0;
+}
+
+#killFeed {
+	position: fixed;
+	top: 20px;
+	left: 20px;
+	text-align: left;
+}
+
+.kfItem {
+	margin-bottom: 0px;
+}
+
+.headshotChatIcon, .weaponChatIcon {
+	filter: drop-shadow(3px 3px 0px black);
+}
+
+#fpsDisplay {
+	position: fixed;
+    	top: 0;
+    	right: 5px;
+	text-shadow: 2px 2px black;
+}
+
+#pingDisplay {
+	position: fixed;
+    	top: 20px;
+    	right: 5px;
+	text-shadow: 2px 2px black;
+}
+
+#pingDisplay::before {
+	content: "Ping: ";
+}
+
+.kfItem, #speedRunBox, #newLeaderContainer, #reloadMsg {
+	background: #000000AA;
+	border-radius: 0px;
+}
+
+#mainLogo {
+	content: url(vclogo.png);
+	height: 350px;
+}
+
+#newLeaderDisplay {
+	border-radius: 0px;
+}
+
+#chalDisplay {
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+#igXPBar {
+	height: 7px;
+}
+
+#igXPBarProg, .progressBarInner {
+	background: linear-gradient(to right, #5bb4e4, #ff96e1);
+	opacity: 1;
+}
+
+#topRight {
+	top: 325px;
+    	right: 70px;
+}
+
+/*#menuHolder::before {
+	background-color: black;
+	content: "";
+  	top: 0;
+  	left: 0;
+  	width: 100%;
+	height: 100%;
+  	position: absolute;
+  	z-index: -3;   
+}*/
+
+#instructionHolder::before {
+	background-color: black;
+	content: "";
+  	top: 0;
+  	left: 0;
+  	bottom: 0;
+  	right: 0;
+  	position: absolute;
+  	z-index: -9999;
+}
+
+#instructionHolder::after {
+	background-image: url(vcbg.png);
+	background-size: cover;
+	content: "";
+  	top: 0;
+  	left: 0;
+  	bottom: 0;
+  	right: 0;
+  	position: absolute;
+  	z-index: -1;
+	clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+	transition: clip-path 1s ease-out;  
+	animation: fadein 0.5s linear;
+}
+
+#uiBase.onMenu #instructionHolder::after {
+	clip-path: polygon(8% 10%, 89% 4%, 98% 95%, 5% 88%);  
+}
+
+#gameNameHolder {
+	left: 0;
+	transform: unset;
+}
+
+#menuItemContainer {
+	position: absolute;
+    bottom: 50%;
+    left: 50%;
+	transform: translate(0%,50%) scale(.95);
+	top: initial;
+	width: auto;
+	display: flex;
+	flex-direction: column;
+	background:  transparent;
+}
+
+#rankedSoonTm, #faceItIconM, #headerRight, #termsInfo, #mapInfoHolder {
+	display: none;
+}
+
+.menuItem {
+    padding: 12px 60px;
+    text-align: center;
+    color: #fff;
+    text-shadow: 6px 6px black;
+    pointer-events: all;
+    cursor: pointer;
+    transition: all .1s;
+    height: 75px;
+    clip-path: polygon(8% 10%, 89% 4%, 98% 95%, 5% 88%);
+    padding-top: 0px !important;
+}
+
+.menuItemIcon {
+	display: none;
+}
+
+.menBtnIcn {
+	display: none !important;
+}
+
+.menuItemTitle {
+	font-size: 60px !important;
+    margin-top: 0px !important;
+    color: #ff96e1 !important;
+    font-family: "Pricedown";
+}
+
+.menuItem:hover {
+	background-color: #178443 !important;
+	border-left: 0;
+}
+
+#subLogoButtons {
+	bottom: 50%;
+	display: flex;
+	flex-direction: column;
+	transform: translate(-100%,50%) scale(.95);
+}
+
+#menuHider::before {
+	content: "Main Menu";
+	position: fixed;
+    top: 20px;
+    right: 20px;
+    font-size: 100px;
+    font-family: "Pricedown";
+    color: #ff96e1 !important;
+    text-shadow: -8px 8px black;
+
+}
+
+.button.small {
+	font-size: 60px !important;
+    margin-top: 0 !important;
+    color: #ff96e1 !important;
+    font-family: "Pricedown";
+    box-shadow: none !important;
+    background-color: #00000000 !important;
+    border: unset !important;
+    padding: 12px 60px !important;
+    height: unset !important;
+    clip-path: polygon(8% 10%, 89% 4%, 98% 95%, 5% 88%);
+    line-height: unset;
+    text-shadow: 6px 6px black;
+    padding-top: 0px !important;
+}
+
+.button.small:hover {
+	background-color: #178443 !important;
+	transform: unset;
+}
+
+#uiBase.onMenu #instructions {
+	opacity: 0 !important;
+}
+
+#spectButton {
+ 	top: unset !important;
+	left: unset !important;
+	bottom: 10px;
+	right: 35px;
+}
+
+#customizeButton {
+	height: 300px;
+	top: -200px;
+	opacity: 0;
+}
+
+#initLoader {
+	background: url(vcload.png);
+    background-size: cover;
+    background-position: bottom;
+}
+
+#initLoader::before {
+	content: "";
+    position: fixed;
+    top: 100px;
+    left: 100px;
+    background: url(vclogo.png);
+    width: 1000px;
+    height: 461px;
+    background-size: cover;
+}
+
+#initLoader::after {
+    content: "";
+    position: fixed;
+    bottom: 80px;
+    left: 80px;
+    right: 80px;
+    height: 20px;
+    border: 5px solid black;
+    background: linear-gradient(45deg, #ff96e1, #ff96e1);
+    background-color: #890062;
+    background-repeat: no-repeat;
+    background-size: 0%;
+    animation: loadbar 5s linear both;
+}
+
+#lC-cont, #loadTipsHolder, #loadGamNm, #loadEditrBtn, #loadInfoRHolder, #loadInfoLHolder {
+	display: none;
+}
+
+#challIcon {
+	display: none;
+}

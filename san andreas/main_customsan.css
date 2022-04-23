@@ -1,0 +1,323 @@
+/*
+sa red 9f1d1f
+sa green #2f5b26
+
+*/
+
+/*===========FONT DECLARATIONS============*/
+@font-face {
+	font-family: beckett;
+	src: url("https://raw.githubusercontent.com/LukeTheDuke240/LukeTheDuke240.github.io/main/assets/fonts/sa/beckett.TTF");
+}
+
+@font-face {
+	font-family: bankgothic;
+	src: url("https://raw.githubusercontent.com/LukeTheDuke240/LukeTheDuke240.github.io/main/assets/fonts/sa/bankgothic.ttf");
+}
+
+@font-face {
+	font-family: diploma;
+	src: url("https://raw.githubusercontent.com/LukeTheDuke240/LukeTheDuke240.github.io/main/assets/fonts/sa/diploma.ttf");
+}
+
+@font-face {
+	font-family: pricedown;
+	src: url("https://raw.githubusercontent.com/LukeTheDuke240/LukeTheDuke240.github.io/main/assets/fonts/sa/pricedown.ttf");
+}
+
+@font-face {
+	font-family: aharoni;
+	src: url("https://raw.githubusercontent.com/LukeTheDuke240/LukeTheDuke240.github.io/main/assets/fonts/sa/ahronbd.ttf");
+}
+
+/*===========SETUP AND HIDING============*/
+
+#weapDisplay, #teamScores, #aHolder, .endAHolder, .imageButton, #pingIcon, #spectButton {
+	display: none !important;
+}
+
+#healthValue, #maxHP, #timerIcon, #curGameInfo, #voiceDisplay, #ammoIcon, #onetrust-consent-sdk, #tlInfHold, #newsHolder, #editorBtnM, .verticalSeparator, .verticalSeparatorInline, #seasonLabel, #speedRunReset, #menuPingDisplay, #menuClassSubtext, #menuClassName, #menuClassNameTag, .krSocial, #mLevelCont, #menuLvlHold, #menuMiniProfilePic, #policeButton, #faceitReturnHolder, #healthValueHolder, #teamName, #termsInfo, #menuBtnRanked, #gameNameHolder, #headerRight {
+	display: none;
+}
+
+[onclick="openTab('./docs/terms.txt')"], [onclick="showWindow(29)"], [onclick="showWindow(21)"] {
+	display: none;
+}
+
+span[style="font-size:15px;color:rgba(255,255,255,0.6)"] {
+	display: none;
+}
+
+/*===========MAIN BEGIN============*/
+
+#healthBar {
+	display: flex;
+	background: #600000;
+	height: 10px;
+    	width: 300px;
+	border: 5px solid black; /*keep the ratio 1x2x1*/
+	position: fixed;
+    	right: 81px;
+    	top: 195px;
+}
+
+.healthBarSeg {
+	margin-right: -1px;
+	width: -webkit-fill-available;
+	background-color: unset;
+}
+
+.hpBSeg {
+	border-radius: unset;
+	-webkit-box-shadow: unset;
+	box-shadow: unset;
+	background-color: #9f1d1f !important;
+}
+
+/*#bottomLeftHolder {
+	width: 100%;
+    	height: 100%;
+    	margin: 0;
+    	padding: 0;
+}*/
+
+#timerDisplay {
+	margin: 0;
+	padding: 0;
+}
+
+#timerDisplay {
+	background-color: unset;
+	display: inline-block;
+    margin: 0;
+    padding: 0;
+    position: fixed;
+    right: 80px;
+    top: 40px
+}
+
+#timerVal {
+	font-family: pricedown;
+    	font-size: 60px;
+    	text-shadow: -5px 5px black, 5px 5px black, 5px -5px black, -5px -5px black, 0px 5px black, 0px -5px black;
+    	letter-spacing: 5px;
+}	
+
+#hudClassIcon {
+	padding: 0;
+    	margin: 0;
+    	position: fixed;
+    	top: 57px;
+    	right: 270px;
+    	border: 10px solid black;
+    	border-radius: 20px;
+}
+
+#scoreCount {
+	margin: 0;
+	background-color: unset;	
+    margin: 0;
+    padding: 0;
+    position: fixed;
+    right: 80px;
+    top: 210px;
+}
+
+#myScoreVal {
+	color: #2f5b26;
+    	font-family: pricedown;
+    	font-size: 60px;
+    	text-shadow: -5px 5px black, 5px 5px black, 5px -5px black, -5px -5px black, 0px 5px black, 0px -5px black;
+}
+
+#myScoreVal::before {
+	content: "$";
+}
+
+#scoreCount > .material-icons {
+	display: none;
+}
+
+#bottomLeftHolder {
+	z-index: unset;
+}
+
+#ammoDisplay {
+	margin: 0px;
+    padding: 0px;
+    position: fixed;
+    top: 132px;
+    right: 270px;
+    width: 125px;
+    display: inline-block;
+	background: unset;
+}
+
+#ammoVal, #ammoMax {
+	color: white;
+    font-family: aharoni;
+    font-size: 50px;
+    text-shadow: rgb(0, 0, 0) 4px 0px 0px, rgb(0, 0, 0) 3.87565px 0.989616px 0px, rgb(0, 0, 0) 3.51033px 1.9177px 0px, rgb(0, 0, 0) 2.92676px 2.72656px 0px, rgb(0, 0, 0) 2.16121px 3.36588px 0px, rgb(0, 0, 0) 1.26129px 3.79594px 0px, rgb(0, 0, 0) 0.282949px 3.98998px 0px, rgb(0, 0, 0) -0.712984px 3.93594px 0px, rgb(0, 0, 0) -1.66459px 3.63719px 0px, rgb(0, 0, 0) -2.51269px 3.11229px 0px, rgb(0, 0, 0) -3.20457px 2.39389px 0px, rgb(0, 0, 0) -3.69721px 1.52664px 0px, rgb(0, 0, 0) -3.95997px 0.56448px 0px, rgb(0, 0, 0) -3.97652px -0.432781px 0px, rgb(0, 0, 0) -3.74583px -1.40313px 0px, rgb(0, 0, 0) -3.28224px -2.28625px 0px, rgb(0, 0, 0) -2.61457px -3.02721px 0px, rgb(0, 0, 0) -1.78435px -3.57996px 0px, rgb(0, 0, 0) -0.843183px -3.91012px 0px, rgb(0, 0, 0) 0.150409px -3.99717px 0px, rgb(0, 0, 0) 1.13465px -3.8357px 0px, rgb(0, 0, 0) 2.04834px -3.43574px 0px, rgb(0, 0, 0) 2.83468px -2.82216px 0px, rgb(0, 0, 0) 3.44477px -2.03312px 0px, rgb(0, 0, 0) 3.84068px -1.11766px 0px, rgb(0, 0, 0) 3.9978px -0.132717px 0px; /*weird text shadow hack*/
+}
+
+#killFeed {
+	position: fixed;
+    top: 20px;
+    left: 20px;
+    text-align: left;
+}
+
+.debugInfo {
+	display: flex;
+    position: fixed;
+    bottom: 5px;
+    right: 45px;
+}
+
+#fpsDisplay, #pingDisplay {
+	margin-right: 20px;
+	font-family: aharoni;
+    	font-size: 20px;
+}
+
+#pingDisplay {
+	display: flex;
+	flex-direction: row;
+}
+
+#fpsDisplay > *, #pingDisplay > * {
+	font-family: aharoni;
+    	font-size: 40px;
+}
+
+#pingDisplay::after {
+	content: "PING";
+    margin-left: 8px;
+    margin-top: 15px;
+    height: 100%;
+    position: absolute;
+}
+
+#voteToKick {
+	top: 50%;
+    position: fixed;
+    transform: translateY(-50%);
+    display: none;
+	left: 20px;
+}
+
+#instructions {
+	top: unset;
+    bottom: 20px;
+    font-family: bankgothic;
+    animation: unset;
+}
+
+.kfItem {
+	background: black;
+}
+
+#chatHolder {
+	left: 20px;
+	bottom: 20px;
+}
+
+#uiBase.onMenu #chatHolder, #uiBase.onGame #chatHolder {
+	left: 20px;
+	bottom: 20px;
+}
+
+#classPreviewCanvas {
+	margin-bottom: -20px;
+}
+
+#signedInHeaderBar, #signedOutHeaderBar {
+	background: unset;
+}
+
+#menuUsernameContainer, #signedInHeaderBar > .krInfo {
+	margin-right: 20px;
+}
+
+/*reetarded menu hack*/
+
+#menuItemContainer {
+	position: absolute;
+    	bottom: 50%;
+    	left: 50%;
+	transform: translate(0%,50%) scale(.95);
+	top: initial;
+	width: auto;
+	display: flex;
+	flex-direction: column;
+}
+
+.menuItem {
+	padding-top: 5px!important;
+    	padding-bottom: 13px!important;
+    	padding-left: 22px!important;
+    	padding-right: 22px!important;
+    	font-size: 22px!important;
+    	margin-left: 3px;
+    	margin-right: 3px;
+    	text-shadow: -1px -1px 0 #202020,1px -1px 0 #202020,-1px 1px 0 #202020,1px 1px 0 #202020,-2px -2px 0 #202020,2px -2px 0 #202020,-2px 2px 0 #202020,2px 2px 0 #202020,-3px -3px 0 #202020,3px -3px 0 #202020,-3px 3px 0 #202020,3px 3px 0 #202020!important;
+	position: relative;
+    	display: inline-block;
+    	box-sizing: border-box;
+    	border-radius: 4px;
+    	padding: 12px 18px;
+    	padding-top: 14px;
+    	margin-bottom: 6px;
+	background-color: #00000000;
+    	text-align: center;
+    	color: #fff;
+    	text-shadow: -1px -1px 0 #202020, 1px -1px 0 #202020, -1px 1px 0 #202020, 1px 1px 0 #202020, -2px -2px 0 #202020, 2px -2px 0 #202020, -2px 2px 0 #202020, 2px 2px 0 #202020;
+    	pointer-events: all;
+    	cursor: pointer;
+	flex-grow: unset;
+}
+
+.menuItemIcon {
+	display: none;
+}
+
+.menuItemTitle {
+	font-size: 60px !important;
+	margin-top: 0 !important;
+	font-family: bankgothic;
+}
+
+.menuItem .menuItemTitle {
+	color: #BBBBBB;
+}
+
+.menuItem:hover {
+	color: #ffffff !important;
+	border-left: 0;
+}
+
+.menuItem:hover .menuItemTitle {
+	color: #ffffff !important;
+}
+
+#subLogoButtons {
+	bottom: 50%;
+	display: flex;
+	flex-direction: column;
+	transform: translate(-100%,50%) scale(.95);
+}
+
+.button.small {
+	font-size: 60px !important;
+    	margin-top: 0 !important;
+    	color: #BBBBBB !important;
+    	font-family: bankgothic;
+    	box-shadow: none !important;
+    	background-color: #00000000 !important;
+	transition: none;
+}
+
+.button.small:hover {
+	color: #FFFFFF !important;
+	transform: unset;
+}

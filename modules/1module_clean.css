@@ -1,0 +1,7 @@
+#aHider, #aHolder, .endAHolder, #tlInfHold, #newsHolder, .imageButton, #editorBtnM, #headerRight > .verticalSeparator, #onetrust-consent-sdk, #gameNameHolder, #voiceDisplay, #seasonLabel, .setSugBox2 {
+	display: none !important;
+}
+
+#subLogoButtons {
+	bottom: 0px;
+}

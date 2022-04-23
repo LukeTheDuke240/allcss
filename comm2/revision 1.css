@@ -1,0 +1,379 @@
+/*
+CSS COPYRIGHT LukeTheDuke#7313 for [redacted]
+DO NOT DISTRIBUTE
+*/
+
+/*=== SECTION 0: ROOT ===*/
+
+:root {
+	--accent-color: #fcbacb;
+    --menu-paper: #ffc5e5;
+	--yellow: var(--accent-color);
+    --blue: var(--accent-color);
+    --green: var(--accent-color);
+    --red: var(--accent-color);
+    font-weight: 600;
+}
+
+@font-face {
+  font-family: "gamefont";
+  src: url("https://luketheduke.xyz/assets/fonts/urbanist.ttf");
+}
+
+#aHider, #aHolder, .endAHolder, #tlInfHold, #newsHolder, .imageButton, #editorBtnM, #headerRight > .verticalSeparator, #onetrust-consent-sdk, #gameNameHolder, #voiceDisplay, #seasonLabel, .setSugBox2 {
+	display: none !important;
+}
+
+#subLogoButtons {
+	bottom: 10px;
+    display: flex;
+    transform: unset;
+    left: 20px;
+    right: 20px;
+}
+
+/*=== SECTION 1: MENU ===*/
+
+#mapInfoHolder, #headerRight, #menuClassNameTag, #menuClassSubtext, #menuClassName {
+    display: none;
+}
+
+#subLogoButtons>.button {
+    background: var(--accent-color);
+    border-radius: 99999px;
+    width: 140px;
+    padding: 0 20px !important;
+    height: 30px;
+    line-height: 30px;
+    font-size: 25px !important;
+    color: black;
+    margin: 10px;
+    border: 5px solid var(--accent-color) !important;
+    transition: all 0.3s;
+    flex-grow: 1;
+}
+
+#subLogoButtons>.button:hover {
+    background: transparent !important;
+    color: var(--accent-color) !important;
+    transform: unset !important;
+}
+
+#subLogoButtons>.button>* {
+    display: none;
+}
+
+#menuItemContainer {
+    position: absolute;
+    left: 20px;
+    right: 20px;
+    top: 10px;
+    display: flex;
+    flex-direction: row;
+    bottom: unset;
+    width: unset;
+    background: transparent;
+}
+
+.menBtnIcn {
+    display: none !important;
+}
+
+.menuItemTitle {
+    margin-top: unset !important;
+    line-height: 30px;
+    font-size: 25px !important;
+    color: black !important;
+    transition: all 0.3s;
+    display: flex;
+}
+
+.menuItem {
+    text-align: center;
+    pointer-events: all;
+    cursor: pointer;
+    margin-top: unset;
+    background: var(--accent-color);
+    border-radius: 99999px;
+    width: 140px;
+    padding: 0 20px !important;
+    height: 30px;
+    margin: 10px;
+    border: 5px solid var(--accent-color) !important;
+    transition: all 0.3s;
+}
+
+.menuItem:hover {
+    background: transparent !important;
+}
+
+.menuItem:hover .menuItemTitle {
+    color: var(--accent-color) !important;
+}
+
+#menuBtnProfile {
+    font-size: 0px !important;
+}
+
+#menuBtnProfile::before {
+    content: "Profile";
+    font-size: 25px !important;
+}
+
+#menuBtnShop {
+    font-size: 0px !important;
+}
+
+#menuBtnShop::before {
+    content: "Shop";
+    font-size: 25px !important;
+}
+
+#uiBase.onMenu #chatHolder {
+    left: 30px;
+    bottom: 80px;
+}
+
+#classPreviewCanvas {
+    margin-bottom: unset;
+    transform: translateX(-13px);
+}
+
+#menuClassContainer {
+    transform: unset;
+    top: unset;
+    right: -160px;
+    bottom: 80px;
+}
+
+.headerBar {
+    top: 80px;
+    left: 30px;
+    padding: 0;
+}
+
+#customizeButton {
+    font-size: 25px !important;
+    padding: 0;
+    height: 30px;
+    margin: 0;
+    line-height: 30px;
+    border: 5px solid var(--accent-color) !important;
+    background: var(--accent-color);
+    border-radius: 99999px;
+    color: black;
+    text-shadow: unset !important;
+    transition: all 0.3s;
+    width: 293px;
+}
+
+#customizeButton:hover {
+    background: transparent;
+    color: var(--accent-color) !important;
+    transform: unset;
+}
+
+#customizeButton > span {
+    display: none;
+}
+
+#policeButton {
+    height: 30px !important;
+    width: 30px !important;
+    border: 5px solid var(--accent-color) !important;
+    border-radius: 99999px;
+    background: var(--accent-color);
+    margin-bottom: unset !important;
+    transition: all 0.3s;
+}
+
+#policeButton:hover {
+    background: transparent;
+    transform: unset;
+}
+
+#policeButton > img {
+    display: none;
+}
+
+#menuMiniProfilePic, .verticalSeparator, #menuJNKCount > span, .rankClck {
+    display: none !important;
+}
+
+#signedInHeaderBar > div {
+    display: flex !important;
+}
+
+.krInfo, .junkInfo {
+    margin-top: unset;
+}
+
+.headerBar div {
+    color: #fff;
+    padding: 0;
+    bottom: 0;
+    align-self: center;
+}
+
+.headerBar {
+    background: transparent;
+}
+
+#menuAccountUsername, #menuKRCount, #menuJNKCount, #mailContainer {
+    vertical-align: bottom;
+    display: inline-block;
+    font-size: 25px;
+    padding: 0 20px;
+    background: var(--accent-color);
+    color: black;
+    border-radius: 99999px;
+    margin-right: 20px;
+    border: 5px solid var(--accent-color);
+}
+
+#menuKRCount > span {
+    color: black !important;
+}
+
+#menuJNKCount::after {
+    content: " Junk";
+}
+
+#mailContainer > i {
+    font-size: 0 !important;
+}
+
+#mailContainer > i::before {
+    content: "Inbox";
+    font-size: 25px !important;
+    font-family: gamefont;
+    color: black;
+    font-weight: 600;
+}
+
+#menuLvlHold {
+    position: absolute;
+    height: 10px !important;
+    top: 100%;
+    transform: translateY(100%);
+}
+
+.progressBar {
+    border-radius: 99999px;
+    border: 3px solid var(--accent-color);
+    width: calc(100% - 6px);
+    background: transparent;
+}
+
+.progressBarInner {
+    border-radius: 0px;
+    background: var(--accent-color);
+}
+
+#mLevelCont {
+    height: 30px;
+    margin-left: unset;
+    background: var(--accent-color);
+    border-radius: 99999px;
+    border: 5px solid var(--accent-color);
+    padding: 0 20px !important;
+}
+
+#signedInHeaderBar {
+    height: unset;
+}
+
+#mLevelContV {
+    color: black;
+    font-size: 25px;
+    text-align: center;
+}
+
+#mLevelContV::before {
+    content: "Level ";
+}
+
+#signedOutHeaderBar {
+    padding: 0;
+    height: unset;
+}
+
+#signedOutHeaderBar > .button {
+    background: var(--accent-color);
+    border-radius: 99999px;
+    padding: 0 20px !important;
+    height: 30px;
+    line-height: 30px;
+    font-size: 25px !important;
+    color: black;
+    border: 5px solid var(--accent-color) !important;
+    transition: all 0.3s;
+    margin: 0 !important;
+}
+
+#signedOutHeaderBar > .button:hover {
+    transform: unset !important;
+    color: var(--accent-color) !important;
+    background: transparent;
+}
+
+#signedOutHeaderBar > .button > span {
+    display: none;
+}
+
+/*#menuClassContainer::before {
+    content: "";
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    height: 500px;
+    width: 400px;
+    background: var(--menu-paper);
+}*/
+
+#spectButton > span {
+    display: none;
+}
+
+#spectButton > .switchsml {
+    margin: 0;
+    height: 40px;
+    width: 200px;
+}
+
+#spectButton > .switchsml > .sliderSml {
+    border-radius: 99999px;
+    border: 5px solid var(--accent-color);
+    background: var(--accent-color);
+    transition: all 0.3s;
+}
+
+#spectButton > .switchsml > .sliderSml::before {
+    display: none;
+}
+
+#spectButton > .switchsml > .sliderSml::after {
+    content: "Spectate";
+    color: black;
+    font-size: 25px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    text-align: center;
+}
+
+input:checked + .sliderSml {
+    background: transparent !important;
+}
+
+input:checked + .sliderSml::after {
+    content: "Spectating" !important;
+    color: var(--accent-color);
+}
+
+#uiBase.onMenu #spectButton {
+    top: unset;
+    bottom: 80px;
+}
+

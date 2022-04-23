@@ -1,0 +1,232 @@
+/*
+minimal css by luketheduke420#7313
+*/
+
+:root {
+	--accent: #ffa3dd;
+}
+
+* {
+	color: white;
+}
+
+@font-face {
+  font-family: "gamefont";
+  src: url(https://fonts.gstatic.com/s/sourcecodepro/v14/HI_SiYsKILxRpg3hIP6sJ7fM7PqlPevW.woff2) format('woff2');
+}
+
+#healthBar, #maxHP, #timerIcon, #curGameInfo, #voiceDisplay, #ammoIcon, #onetrust-consent-sdk, #tlInfHold, #newsHolder, #editorBtnM, .verticalSeparator, .verticalSeparatorInline, #seasonLabel, #speedRunReset, #menuPingDisplay, #menuClassSubtext, #menuClassName, #menuClassNameTag, .krSocial, #mLevelCont, #menuLvlHold, #menuMiniProfilePic, #policeButton, #faceitReturnHolder, #headerRight, #gameNameHolder, #classPreviewCanvas, #mapInfoHolder,  #bubbleContainer, #mailContainer, #teamScores, #hudClassIcon, #challIcon, #ammoMax {
+	display: none;
+}
+
+[style="font-size:15px;color:rgba(255,255,255,0.6)"] {
+	display: none;
+}
+
+#instructions {
+	animation: unset;
+    bottom: 15px;
+    top: unset;
+    font-size: 35px;
+}
+
+#accManagerBtn, /*#chatUI,*/ #aHolder, #weapDisplay {
+	display: none !important;
+}
+
+.headerBar, #timerDisplay, #healthValueHolder {
+	background: transparent;
+}
+
+.headerBarLeft {
+top: unset;
+    left: unset;
+    bottom: 0;
+    right: 0;
+    font-size: 35px;
+    padding: 0;
+    height: unset;
+    margin: 20px;
+}
+
+#menuUsernameContainer {
+margin-right: 20px;
+}
+
+
+
+#menuClassContainer {
+	height: unset;
+	width: 100px;
+	top: unset;
+	left: unset;
+	right: 0;
+	bottom: 40px;
+	transform: unset;
+	margin: 20px;
+
+}
+
+#customizeButton {
+	font-size: 35px;
+    padding: 0;
+    margin: 0;
+width: unset;
+    background: transparent !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+position: absolute;
+    bottom: 0;
+    right: 0;	
+	color: #bbb;
+}
+
+#customizeButton > span {
+	display: none;	
+}
+
+#customizeButton:hover {
+	transform: unset;
+	color: white;	
+}
+
+/*manual menu override*/
+#menuItemContainer {
+	position: absolute;
+    bottom: 0px;
+    left: 0px;
+	top: unset;
+	width: auto;
+	display: block;
+	margin: 20px
+}
+
+.menuItem {
+    font-size: 35px!important;
+	position: relative;
+    display: inline-block;
+    box-sizing: border-box;
+    background-color: transparent;
+
+    pointer-events: all;
+    cursor: pointer;
+    -webkit-transition: all .3s !important;
+    transition: all .3s !important;
+	flex-grow: unset;
+	width: 20px;
+    overflow-x: hidden;
+    letter-spacing: 200px;
+	margin-right: 20px;
+}
+
+.menuItemIcon {
+	display: none;
+}
+
+.menuItemTitle{
+	font-size: inherit !important;
+	margin-top: 0 !important;
+    	color: #bbb !important;
+}
+
+.menuItem:hover {
+	border-left: 0;
+}
+
+.menuItem:hover .menuItemTitle {
+	color: #fff !important;
+}
+
+#subLogoButtons {
+	bottom: 40px;
+    	left: 0px;
+	transform: unset;
+	margin: 20px;
+}
+
+#subLogoButtons>.button {
+	font-size: 35px!important;
+    text-shadow: unset !important;
+    background: transparent !important;
+    box-shadow: unset !important;
+    padding: 0px !important;
+    margin: 0;
+    margin-right: 20px;
+    width: 20px;
+    overflow: hidden;
+    color: #bbb;
+    height: 40px;
+}
+
+.button.lgn {
+	margin: 0 !important;
+    	padding: 0 !important;
+    	width: unset !important;
+    	background: transparent !important;
+    	box-shadow: none !important;
+    	text-shadow: none;
+    	font-size: 35px;
+	color: #bbb
+}
+
+.button.lgn:hover {
+	transform: unset;
+	color: white;
+}
+
+.button.lgn>span {
+	display: none;
+}
+
+#subLogoButtons>.button:hover {
+	color: #fff;
+	transform: unset;
+}
+
+#uiBase.onMenu #spectButton {
+	top: unset;
+	bottom: 38px;
+	left: 370px;
+}
+
+.headerBar {
+	background: transparent;
+}
+
+.serverPing {
+	font-size: unset !important;	
+}
+
+/* GLASSY BLUR */
+
+#instructionsUpdate, #menuWindow  {
+	background: transparent;
+    backdrop-filter: blur(10px);
+}
+
+#menuWindow {
+	box-shadow: none;
+}
+
+[style="color:rgba(0,0,0,0.3);margin-top:-5px;margin-bottom:10px"] {
+	color: white !important;
+}
+
+a {
+	color: var(--accent);
+}
+
+#timerDisplay {
+	position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 0;
+    margin: 0;
+}
+
+#ammoDisplay {
+	padding: 0;
+    margin: 0;
+    font-size: 80px;
+    height: unset;
+}

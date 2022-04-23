@@ -1,0 +1,530 @@
+/* 
+todo: menuwindow, eng screen, ingameui
+*/
+
+@font-face {
+  font-family: "gamefont";
+  src: url(https://fonts.gstatic.com/s/oswald/v36/TK3_WkUHHAIjg75cFRf3bXL8LICs1_FvsUZiZQ.woff2) format('woff2');
+}
+
+@font-face {
+	font-family: 'ffforward';
+	src: url("https://krunker.io/css/fonts/font2.ttf");
+}
+
+@keyframes titleAnim {
+    from {
+        opacity: 0;
+        transform: translate(-50%,-500%);
+    }
+    to {
+        opacity: 1;
+        transform: translate(-50%,-50%);
+    }
+}
+
+@keyframes titleLoader {
+    0% {
+        transform: translate(-50%, 0%) scaleX(0.05);
+    }
+    50% {
+        transform: translate(0%, 0%) scaleX(1);
+    }
+	100% {
+		transform: translate(50%, 0%) scaleX(0.05);
+	}
+}
+
+@keyframes menuWindow {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+
+:root {
+	--accent-color: #4cbcff;
+}
+
+
+/*==============IN GAME=================*/
+
+/*hide extraneous stuff*/
+#tlInfHold, #onetrust-consent-sdk, #newsHolder, #seasonLabel, #mainLogo, .verticalSeparator, .verticalSeparatorInline, .imageButton, #editorBtnM, #menuRegionLabel, .menuDebugInfo, #termsInfo, #bubbleContainer, #menuClassNameTag, #voiceDisplay, #faceItIconM, #menuClassSubtext, #menuClassName, #policeButton, #infoHolder, #menuMiniProfilePic, .krInfo>.krSocial, #mLevelCont {
+	display: none !important;
+}
+
+/*krunker logo*/
+#menuServerInfoContainer::before {
+	position: fixed;
+    top: 20px;
+    left: 80px;
+    font-size: 60px;
+    color: var(--accent-color);
+    font-weight: 700;
+    content: "Krunker ";
+    height: 100px;
+    width: 300px;
+    text-align: center;
+    transform: skewX(-10deg);
+    text-shadow: var(--accent-color) 1px 1px, var(--accent-color) 2px 2px, var(--accent-color) 3px 3px;
+    letter-spacing: 11px;
+    background: white;
+}
+
+::-webkit-scrollbar {
+	display: none;
+}
+
+/*hide ads*/
+#aHolder, .endAHolder {
+	display: none !important;
+}
+
+.headerBarRight {
+	width: 100%;
+	background: white;	
+	flex-direction: row-reverse;
+	z-index: -1;
+	padding: 0px;
+}
+
+.headerBarLeft {
+	left: unset;
+	right: 0;
+}
+
+/* manual menu override */
+#menuItemContainer {
+	position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    top: 0px;
+    width: auto;
+    height: 70px;
+    display: flex;
+    flex-direction: row;
+}
+
+.menuItem {
+    font-size: 45px!important;
+	position: relative;
+    display: inline-block;
+    box-sizing: border-box;
+    background-color: transparent;
+    pointer-events: all;
+    cursor: pointer;
+    -webkit-transition: all .3s !important;
+    transition: all .3s !important;
+	padding: 0 20px 0 20px;
+    height: 70px;
+    padding-top: 0;
+	margin-left: -1px;
+}
+
+.menuItem::before {
+	content: "";
+	width: 100%;
+	height: 100%;
+	background: var(--accent-color);
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: -1;
+	transition: transform .5s cubic-bezier(0, 0, 0.2, 1) !important;
+	transform: translate(0%, -100%);
+}
+
+.menuItemIcon {
+	display: none;
+}
+
+.menuItemTitle{
+	font-size: inherit !important;
+	margin-top: 0 !important;
+    color: var(--accent-color) !important;
+	font-weight: 700;
+	transition: all .3s !important;
+}
+
+.menuItem:hover {
+	border-left: 0;
+}
+
+.menuItem:hover .menuItemTitle {
+	color: #fff !important;
+}
+
+.menuItem:hover:before {
+	transform: translate(0%, 0%) !important;
+}
+
+/*bottom buttons*/
+#subLogoButtons {
+	bottom: 0;
+    transform: unset;
+    left: unset;
+    justify-content: center;
+    display: flex;
+    width: 100%;
+    height: 70px;
+	pointer-events: all;
+}
+
+#subLogoButtons::before {
+	content: "";
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	position: absolute;
+    background: white;
+}
+
+#subLogoButtons>.button {
+	background: transparent !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+    color: var(--accent-color);
+    font-size: 45px !important;
+    font-weight: 700;
+    margin: 0 0 0 -1px;
+    height: 70px;
+	-webkit-transition: all .3s !important;
+    transition: all .3s !important;
+	z-index: 10;
+}
+
+#subLogoButtons>.button:hover {
+	transform: unset !important;
+	color: white !important;
+}
+
+#subLogoButtons>.button::before {
+	content: "";
+	width: 100%;
+	height: 100%;
+	background: var(--accent-color);
+	position: absolute;
+	top: 0;
+	left: 0;
+	transition: transform .5s cubic-bezier(0, 0, 0.2, 1) !important;
+	transform: translate(0%, 100%);
+	z-index: -1;
+}
+
+#subLogoButtons>.button:hover:before {
+	transform: translate(0%, 0%) !important;
+}
+
+
+/*click to play*/
+#instructions {
+	transition: all 0.7s;
+	font-size: 45px;
+	animation: titleAnim 2s;
+	color: white !important;
+}
+
+#instructions:before {
+	content: "";
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 5px;
+	background: var(--accent-color);
+	z-index: -1;
+	animation: titleLoader 1s cubic-bezier(0.65, 0.05, 0.36, 1) infinite alternate;
+}
+
+#uiBase.onMenu #instructions {
+	top: unset;
+	bottom: 40px;
+	animation: unset;
+}
+
+#uiBase.onMenu #instructions:before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 5px;
+	background: var(--accent-color);
+	z-index: -1;
+	animation: unset;
+}
+
+
+/*SIGNEDOUT*/
+#signedOutHeaderBar {
+	background-color: transparent;
+	padding: 0;
+}
+
+#signedOutHeaderBar>.button {
+	transform: skewX(-10deg);
+    position: fixed !important;
+    right: 80px;
+    top: 20px;
+    background: white !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+    color: var(--accent-color);
+    font-size: 45px !important;
+    font-weight: 700;
+    padding: 20px !important;
+    margin: 0;
+    z-index: 1;
+    -webkit-transition: all .3s !important;
+    transition: all .3s !important;
+    width: 330px !important;
+}
+
+#signedOutHeaderBar>.button:hover {
+	transform: skewX(-10deg) !important;
+	box-shadow: var(--accent-color) 10px 10px !important;
+}
+
+#signedOutHeaderBar>.button>.material-icons {
+	display: none;
+}
+
+/*signed in*/
+/*since transform overrides fixed pos we can't use skew here*/
+
+#signedInHeaderBar {
+	padding: 10px 20px;
+    background: white;
+    top: 20px;
+    right: 80px;
+}
+
+#menuUsernameContainer, .krInfo {
+	margin-right: 20px;
+}
+
+#menuAccountUsername, #menuKRCount, #menuKRCount>span{
+	color: var(--accent-color) !important;
+    font-size: 45px !important;
+    font-weight: 700;
+}
+
+#mailIcon {
+	color: var(--accent-color) !important;
+    font-size: 60px !important;
+    margin-top: 7px;
+}
+
+/*progressbar */
+
+#menuLvlHold {
+	position: fixed;
+    left: 0;
+    top: 70px;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    z-index: -1;
+	background: transparent;
+}
+
+.progressBarInner {
+	background: var(--accent-color);
+}
+
+/*chat*/
+
+#chatHolder {
+	left: 40px !important;
+    bottom: 120px !important;
+	width: 360px;
+}
+
+#chatList::-webkit-scrollbar {
+	width: 0px;
+}
+
+#chatInput {
+	background: white;
+    color: var(--accent-color) !important;
+    transform: skewX(-10deg);
+    font-size: 25px;
+    font-weight: 700;
+    box-shadow: var(--accent-color) 10px 10px;
+}
+
+#chatInput::placeholder {
+  color: var(--accent-color) !important;
+  opacity: 0.5;
+}
+
+#uiBase.onMenu #chatHolder {
+	left: unset;
+    bottom: unset;
+}
+
+.chatItem {
+	background: white !important;
+    color: var(--accent-color) !important;
+    font-size: 25px;
+    font-weight: 700;
+	max-width: 360px;
+	box-shadow: var(--accent-color) 5px 5px;
+    margin-left: 3px;
+    margin-bottom: 20px;
+}
+
+.chatMsg, .chatMsg>*, .chatMsg>*>* {
+	background: white;
+    color: var(--accent-color) !important;
+    transform: skewX(-10deg);
+    font-size: 25px;
+    font-weight: 700;
+}
+
+/*customize button*/
+
+#customizeButton {
+	transform: skewX(-10deg);
+    background: white !important;
+    box-shadow: unset !important;
+	font-weight: 700;
+    text-shadow: none !important;
+    color: var(--accent-color);
+    font-size: 45px;
+    margin: 0;
+    border-radius: 0;
+    position: fixed !important;
+    bottom: 20px;
+    right: 80px;
+	transition: all .3s !important;
+}
+
+#customizeButton:hover {
+    box-shadow: var(--accent-color) 10px 10px !important;
+}
+
+#customizeButton>.material-icons {
+	display: none;
+}
+
+#menuClassContainer {
+	transform: unset;
+}
+
+#classPreviewCanvas {
+	margin: 0;
+    position: fixed;
+    bottom: 120px;
+    right: -110px;
+}
+
+/*spectate button*/
+
+#spectButton {
+	bottom: 160px !important;
+	top: unset !important;
+}
+
+#spectButton>.switchsml {
+	margin: 0;
+    width: 40px;
+    height: 40px;
+}
+
+.sliderSml {
+	background: white;
+}
+
+.sliderSml::before {
+	background: transparent;
+}
+
+input:checked + .sliderSml {
+	background-color: var(--accent-color);
+}
+
+#spectButton>span {
+	display: none;
+}
+
+/*instructions update*/ 
+#instructionsUpdate {
+	background: white;
+    box-shadow: var(--accent-color) 10px 10px;
+    width: unset;
+    padding: 20px;
+    transform: skewX(-10deg) translate(-50%,-50%);
+}
+
+#instructionsUpdate>div, #instructionsUpdate>div>a {
+	color: var(--accent-color) !important;
+    font-size: 35px !important;
+    font-weight: 700;
+} /* ===================================== USE NTH CHILD HERE*/
+
+/* menu window */
+
+#menuWindow {
+	box-shadow: unset;
+	-webkit-box-shadow: unset;
+	animation: menuWindow 1s ease-in-out;
+    transition: all 2s;
+    z-index: -5;
+}
+
+#menuWindow::after {
+	content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: var(--accent-color);
+    z-index: -1;
+    transform: skewX(-10deg);
+}
+
+#menuWindow>*, #menuWindow>*>*, #menuWindow>*>*>* {
+	color: var(--accent-color);
+    font-size: 40px;
+}
+
+#instructionsUpdate>div>[style="color:#6441a5!important"] {
+	display: none;
+}
+
+#instructionsUpdate>[style="color: rgba(255, 255, 255, 0.6);font-size: 20px;margin-bottom: 13px;margin-top: 10px;"] {
+	color: transparent !important;
+	margin-right: -8px;
+}
+
+/*new fixes after 4.2.0*/
+
+.menBtnIcn {
+    display: none !important;
+}
+
+#menuItemContainer {
+    background: transparent;
+}
+
+#signedInHeaderBar {
+    padding-right: 20px !important;
+    border-radius: 0px !important;
+}
+
+#customizeButton {
+    font-size: 45px !important;
+    border: unset !important;
+    height: 50px;
+}
+
+#subLogoButtons>.button {
+    border: none!important;
+}
